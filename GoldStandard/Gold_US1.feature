@@ -58,18 +58,18 @@ Scenario: Close modal with "Cancel" button
 
 Scenario: Close modal with "Cancel" button with inputs
     Given the "Add new aircraft" button is clicked
-    When the user enters "<newName>" into the "Name" input field
-    And the user enters "<newMSN>" into the "MSN" input field
-    And the user selects "<option1>" from the "Manufacturer" dropdown
-    And the user enters "<newDescription>" into the "Description" text area
+    When the user enters "<aircraftName>" into the "Name" input field
+    And the user enters "<msn>" into the "MSN" input field
+    And the user selects "<manufacturer>" from the "Manufacturer" dropdown
+    And the user enters "<description>" into the "Description" text area
     And the user clicks the "Cancel" button
     Then the "Add new aircraft" modal should be hidden
-    And the page should not contain the value "<newName>"
+    And the page should not contain the value "<aircraftName>"
 
 Scenario: Successful Save
     Given the "Add new aircraft" button is clicked
-    When the user enters "<newAircraftName>" into the "Name" input field
-    And the user enters "<newMsn>" into the "MSN" input field
+    When the user enters "<aircraftName>" into the "Name" input field
+    And the user enters "<msn>" into the "MSN" input field
     And the user selects "<manufacturer>" from the "Manufacturer" dropdown
     And the user enters "<description>" into the "Description" text area
     And the user clicks the "Save" button
