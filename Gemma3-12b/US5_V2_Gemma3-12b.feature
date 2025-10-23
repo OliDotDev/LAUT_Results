@@ -7,7 +7,7 @@ Background:
 
 Scenario: Task list displayed with sequence numbers
     Then the "Tasks" table should display a "Sequence Number" column
-    And each task in the "Tasks" table should have a numerical value in the "Sequence Number" column"
+    And each task in the "Tasks" table should have a numerical value in the "Sequence Number" column
 
 Scenario: Arrow buttons displayed for single task selection
     When the user selects the checkbox for a task
