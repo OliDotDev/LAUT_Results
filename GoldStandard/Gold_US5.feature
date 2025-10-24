@@ -3,6 +3,10 @@ As a user
 I want to change the order of tasks in a directory
 so that I can arrange them according to priority or workflow.
 
+Background:
+    Given the user is logged in as "user"
+    And the user is on the "Task Management" page
+
 Scenario: Initial Display
     Then the "Tasks" table should be visible
     And the "Tasks" table should have a "Sequence Number" column
@@ -28,7 +32,7 @@ Scenario: "Arrow" Buttons when first checkbox checked
     And the button with the "Arrow-down" icon should be enabled
 
 Scenario: "Arrow" Buttons when last checkbox checked
-    When the user checks the checkbox of the first row in the "Tasks" table
+    When the user checks the checkbox of the last row in the "Tasks" table
     Then the button with the "Arrow-up" icon should be enabled
     And the button with the "Arrow-down" icon should be disabled
 
@@ -49,4 +53,5 @@ Scenario: Move task down
 Scenario: Seletion remains after moving task
     When the user checks the checkbox for the "<task1>" task
     And the user clicks the button with the "Arrow-down" icon
+
     Then the checkbox for the "<task1>" task should be checked
